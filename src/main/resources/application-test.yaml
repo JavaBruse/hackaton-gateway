@@ -1,0 +1,24 @@
+logging:
+  level:
+    org.springframework.web.reactive.function.client.ExchangeFunctions: TRACE
+    org.springframework.web.reactive.function.client: TRACE
+    org.springframework.cloud.gateway: TRACE
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        enabled: true
+        corsConfigurations:
+          '[/**]':
+            allowed-origins:
+              - "http://localhost:4200"
+              - "http://172.16.1.131"
+            allowed-methods:
+              - "GET"
+              - "POST"
+              - "PUT"
+              - "DELETE"
+            allowed-headers:
+              - "Content-Type"
+              - "Authorization"
+            allow-credentials: true

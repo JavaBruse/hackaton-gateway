@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gateway
+    image: gateway
+    networks:
+      app_network:
+        ipv4_address: 172.20.0.11  # Статический IP для контейнера
+    restart: unless-stopped
+    expose:
+      - "5555"  # Только внутри сети Docker
+    environment:
+      - SPRING_PROFILES_ACTIVE=${SPRING_PROFILE}  # Передаем профиль через переменную
+
+networks:
+  app_network:
+    external: true  # Указываем, что сеть внешняя, но она должна быть заранее создана

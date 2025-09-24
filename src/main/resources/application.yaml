@@ -8,7 +8,7 @@ spring:
     gateway:
       routes:
         - id: security
-          uri: http://security:8189/
+          uri: http://172.20.0.12:8189/
           predicates:
             - Path=/security/**
           filters:
@@ -17,13 +17,6 @@ spring:
           uri: http://172.20.0.13:8189/
           predicates:
             - Path=/main/**
-          filters:
-            - StripPrefix=1
-            - JwtAuthFilter
-        - id: vk_service
-          uri: http://vkserv:8189
-          predicates:
-            - Path=/vk/**
           filters:
             - StripPrefix=1
             - JwtAuthFilter
@@ -37,4 +30,4 @@ spring:
 
 auth:
   server:
-    url: http://security:8189/auth
+    url: http://172.20.0.12:8189/auth

@@ -12,7 +12,7 @@ spring:
           '[/**]':
             allowed-origins:
               - "http://localhost:4200"
-              - "http://172.16.1.131"
+              - "http://5.129.246.42/"
             allowed-methods:
               - "GET"
               - "POST"

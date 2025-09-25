@@ -1,6 +1,6 @@
-package org.Trochilidae;
+package com.javabruse;
 
-import org.Trochilidae.filtrs.CookieForwardFilter;
+import com.javabruse.filtrs.CookieForwardFilter;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;

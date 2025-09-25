@@ -1,6 +1,6 @@
-package org.Trochilidae.filtrs;
+package com.javabruse.filtrs;
 
-import org.Trochilidae.filtrs.utils.TokenValidationService;
+import com.javabruse.filtrs.utils.TokenValidationService;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
 import org.springframework.http.HttpHeaders;
@@ -9,7 +9,6 @@ import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
-import lombok.extern.slf4j.Slf4j;
 
 @Component
 public class JwtAuthFilter extends AbstractGatewayFilterFactory<JwtAuthFilter.Config> {

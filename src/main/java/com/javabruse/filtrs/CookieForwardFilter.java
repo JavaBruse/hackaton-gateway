@@ -1,4 +1,4 @@
-package org.Trochilidae.filtrs;
+package com.javabruse.filtrs;
 
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
